@@ -66,10 +66,10 @@ if __name__ == '__main__':
 
         if threshold > currentval:
             grove_rgb_lcd.setRGB(0,255,0)
-        	grove_rgb_lcd.setText(threshold" cm\n"current" cm")
+            grove_rgb_lcd.setText(f"{threshold} cm\n{currentval} cm")
         elif threshold <= currentval:
             grove_rgb_lcd.setRGB(255,0,0)
-            grove_rgb_lcd.setText(threshold" cm OBJ PRES\n"current" cm")
+            grove_rgb_lcd.setText(f"{threshold} cm OBJ PRES\n{currentval} cm")
 
         time.sleep(0.2)
 
