@@ -68,21 +68,21 @@ if __name__ == '__main__':
         if threshold < currentval:
             grove_rgb_lcd.setRGB(0,255,0)
             if threshold < 10:
-            	grove_rgb_lcd.setText_norefresh(f"   {threshold} cm\n{currentval} cm")
+            	grove_rgb_lcd.setText_norefresh(f"{threshold} cm            \n{currentval} cm")
             elif 10 <= threshold < 100:
-            	grove_rgb_lcd.setText_norefresh(f"  {threshold} cm\n{currentval} cm")
+            	grove_rgb_lcd.setText_norefresh(f"{threshold} cm           \n{currentval} cm")
             elif 100 <= threshold < 1000:
-            	grove_rgb_lcd.setText_norefresh(f" {threshold} cm\n{currentval} cm")
+            	grove_rgb_lcd.setText_norefresh(f"{threshold} cm          \n{currentval} cm")
             elif threshold >= 1000:
-            	grove_rgb_lcd.setText_norefresh(f"{threshold} cm\n{currentval} cm")
+            	grove_rgb_lcd.setText_norefresh(f"{threshold} cm         \n{currentval} cm")
         elif threshold >= currentval:
             grove_rgb_lcd.setRGB(255,0,0)
             if threshold < 10:
-            	grove_rgb_lcd.setText_norefresh(f"   {threshold} cm OBJ PRES\n{currentval} cm")
+            	grove_rgb_lcd.setText_norefresh(f"{threshold} cm OBJ PRES   \n{currentval} cm")
             elif 10 <= threshold < 100:
-            	grove_rgb_lcd.setText_norefresh(f"  {threshold} cm OBJ PRES\n{currentval} cm")
+            	grove_rgb_lcd.setText_norefresh(f"{threshold} cm OBJ PRES  \n{currentval} cm")
             elif 100 <= threshold < 1000:
-            	grove_rgb_lcd.setText_norefresh(f" {threshold} cm OBJ PRES\n{currentval} cm")
+            	grove_rgb_lcd.setText_norefresh(f"{threshold} cm OBJ PRES \n{currentval} cm")
             elif threshold >= 1000:
             	grove_rgb_lcd.setText_norefresh(f"{threshold} cm OBJ PRES\n{currentval} cm")
 
