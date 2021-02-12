@@ -48,6 +48,7 @@ if __name__ == '__main__':
     grove_rgb_lcd.setRGB(255,255,255)
     grove_rgb_lcd.setText("Tim Bryer-Ash\nEE 250")
     time.sleep(2)
+    grove_rgb_lcd.setText("")
 
     while True:
         #So we do not poll the sensors too quickly which may introduce noise,
