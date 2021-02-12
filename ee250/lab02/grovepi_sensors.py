@@ -72,5 +72,3 @@ if __name__ == '__main__':
             grove_rgb_lcd.setText(f"{threshold} cm OBJ PRES\n{currentval} cm")
 
         time.sleep(0.2)
-
-        print(grovepi.ultrasonicRead(PORT))
