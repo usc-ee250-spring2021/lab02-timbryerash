@@ -37,7 +37,7 @@ if __name__ == '__main__':
 
     #INITIALIZE ULTRASONIC AND ROTARY
 
-    grovepi.ultrasonicRead(ultrasonic_ranger)
+    ultrasonic_ranger = 4
     # Reference voltage of ADC is 5v
     adc_ref = 5
     # Vcc of the grove interface is normally 5v
@@ -62,7 +62,7 @@ if __name__ == '__main__':
 
         threshold = degrees*(1023/300)
         threshold = round(threshold)
-        currentval = grovepi.ultrasonicRead(PORT)
+        currentval = grovepi.ultrasonicRead(ultrasonic_ranger)
 
         if threshold > currentval:
             grove_rgb_lcd.setRGB(0,255,0)
@@ -72,5 +72,3 @@ if __name__ == '__main__':
             grove_rgb_lcd.setText(f"{threshold} cm OBJ PRES\n{currentval} cm")
 
         time.sleep(0.2)
-
-        print(grovepi.ultrasonicRead(PORT))
