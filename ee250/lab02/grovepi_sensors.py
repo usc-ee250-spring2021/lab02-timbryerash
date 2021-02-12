@@ -64,12 +64,12 @@ if __name__ == '__main__':
         threshold = round(threshold)
         currentval = grovepi.ultrasonicRead(PORT)
 
-            if threshold > currentval:
-                grove_rgb_lcd.setRGB(0,255,0)
-               	grove_rgb_lcd.setText(threshold" cm\n"current" cm")
-            elif threshold <= currentval:
-            	grove_rgb_lcd.setRGB(255,0,0)
-                grove_rgb_lcd.setText(threshold" cm OBJ PRES\n"current" cm")
+        if threshold > currentval:
+            grove_rgb_lcd.setRGB(0,255,0)
+        	grove_rgb_lcd.setText(threshold" cm\n"current" cm")
+        elif threshold <= currentval:
+            grove_rgb_lcd.setRGB(255,0,0)
+            grove_rgb_lcd.setText(threshold" cm OBJ PRES\n"current" cm")
 
         time.sleep(0.2)
 
